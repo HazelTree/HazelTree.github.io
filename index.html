@@ -339,7 +339,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/Python-ing/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/将本地repository提交到github时遇到的问题及解决方案/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hazel Tree">
@@ -359,7 +359,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/03/23/Python-ing/" class="post-title-link" itemprop="url">Some small tips</a>
+                <a href="/2019/03/23/将本地repository提交到github时遇到的问题及解决方案/" class="post-title-link" itemprop="url">将本地repository提交到github时遇到的问题及解决方案</a>
               
             
           </h1>
@@ -384,12 +384,24 @@
                 
               
 
-              <time title="创建时间：2019-03-23 14:04:34 / 修改时间：14:06:14" itemprop="dateCreated datePublished" datetime="2019-03-23T14:04:34+08:00">2019-03-23</time>
+              <time title="创建时间：2019-03-23 14:04:34" itemprop="dateCreated datePublished" datetime="2019-03-23T14:04:34+08:00">2019-03-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-25 12:36:39" itemprop="dateModified" datetime="2019-03-25T12:36:39+08:00">2019-03-25</time>
               
             
           </span>
@@ -417,7 +429,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">0</span>
+                <span title="本文字数">361</span>
               
 
               
@@ -453,7 +465,17 @@
       
         
           
-            
+            <p>在提交之前，github 的 指定 repository 曾通过网页提交上传过文件/已经创建README<br>所以在输入<br><code>git push origin master</code><br>出现<br>(<code>)
+ error: src refspec master​ does not match any. 
+ error: 无法推送一些引用到 ‘git@gitlab.xxx:xxx.git’
+(</code>)</p>
+<p>解决方法：<br>输入<br><code>git pull --rebase origin master</code><br>or<br><code>git pull origin master --allow-unrelated-histories</code></p>
+<p>之后可能会出现<br>(<code>)
+请输入一条提交消息来解释为什么这个合并是是必要的，
+特别是如果它将更新的上游合并到主题分支中
+(</code>)</p>
+<p>这时可以先输入<code>i</code>, 输入注释内容，再按esc，输入<code>：wq</code>即可</p>
+
           
         
       
